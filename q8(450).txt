@@ -1,0 +1,10 @@
+class Solution {
+  public:
+        long long maxSubarraySum(int arr[], int n) {
+        long long best=0,sum=0;
+        for(int k=0;k<n;k++){
+            sum = max(arr[k],sum+arr[k]);
+            best = max(best,sum);
+        }
+        return best;
+    }
